@@ -1,0 +1,23 @@
+on:
+  schedule:
+  - cron: '4 16 * * *'
+  - cron: '4 23 * * *'
+
+jobs:
+  deploy:
+    permissions: {}
+    runs-on: ubuntu-latest
+    environment: defaultenv
+    steps:
+    - uses: actions/checkout@v4
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip' # caching pip dependencies
+    - name: 'run the python script'
+      run: |
+        pip install -r requirements.txt
+        python toot.py
+      env:
+        MAHA_EMAIL: ${{ secrets.MAHA_EMAIL }}
+        MAHA_PWD: ${{ secrets.MAHA_PWD }}
