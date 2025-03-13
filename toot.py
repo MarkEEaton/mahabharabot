@@ -21,7 +21,17 @@ mastodon = Mastodon(access_token=token, api_base_url=base_url)
 with open('O.txt', 'r') as infile:
     toots = infile.readlines()
 
-random_toot = random.randrange(0, len(toots) - 1)
+def randomize():
+    random_toot = random.randrange(0, len(toots) - 1)
+    toot = toots[random_toot]
+    return toot
 
-print(toots[random_toot])
-mastodon.toot(toots[random_toot])
+def tooter():
+    toot = randomize()
+    if len(toot) < 500:
+        print(toot)
+        mastodon.toot(toot)
+    else::
+        tooter()
+
+tooter()
