@@ -31,7 +31,7 @@ def tooter():
     if len(toot) < 500:
         print(toot)
         mastodon.toot(toot)
-    else::
+    else:
         tooter()
 
 tooter()
