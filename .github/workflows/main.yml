@@ -19,5 +19,4 @@ jobs:
         pip install -r requirements.txt
         python toot.py
       env:
-        MAHA_EMAIL: ${{ secrets.MAHA_EMAIL }}
-        MAHA_PWD: ${{ secrets.MAHA_PWD }}
+        MAHABOTSECRET: ${{ secrets.MAHABOTSECRET }}
