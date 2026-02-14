@@ -5,15 +5,15 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "blurhash==1.1.4",
-    "certifi==2025.7.14",
-    "charset-normalizer==3.4.2",
-    "decorator==5.2.1",
-    "idna==3.10",
-    "mastodon-py==2.0.1",
-    "python-dateutil==2.9.0.post0",
-    "python-magic==0.4.27",
-    "requests==2.32.4",
-    "six==1.17.0",
-    "urllib3==2.6.3",
+    "blurhash",
+    "certifi",
+    "charset-normalizer",
+    "decorator",
+    "idna",
+    "mastodon-py",
+    "python-dateutil",
+    "python-magic",
+    "requests",
+    "six",
+    "urllib3",
 ]
